@@ -1,0 +1,61 @@
+.toolbar{
+    height:100px;
+    #toolbarTitle{
+        text-align: center;
+        margin-top: 30px;
+        font-weight: bold;
+        color: #387ef5;
+    }
+}
+
+.back-button{
+    background-color: white;
+    color:#387ef5;
+    margin-top: 30px;
+}
+
+.button{
+    width: 100%;
+    margin-left:10%;
+    margin-right: 8%;
+    margin-top: 8%;
+    font-size: 12px;
+    background-color: #387ef5;
+}
+
+
+
+#container{
+        height:40%; 
+        width:80%;
+        margin-left:10%;
+        margin-right: 10%;
+        margin-top:30%;
+        
+.input{
+width: 70%;
+
+}
+
+placeholder{
+    color:rgba(206, 200, 200, 0.95);
+}
+
+
+.passwordResetLink{
+    margin-left:8%;
+    margin-top:10%;
+    margin-bottom:7%;
+    font-size: 10px;
+}
+.signupLink{
+    margin-left:8%;
+    margin-top:10%;
+    font-size: 10px;
+}
+}
+
+.solid-toast {
+    background-color: rgba(192, 192, 192, 0.933);/* Set the desired background color */
+    color: rgba(86, 240, 112, 0.933); /* Set the desired text color */
+  }

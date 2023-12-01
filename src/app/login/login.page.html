@@ -1,0 +1,61 @@
+<ion-header>
+  <ion-toolbar class="toolbar">
+    <ion-title id="toolbarTitle">OLD RESCUE APP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-toast [cssClass]="'solid-toast'"></ion-toast>
+
+<ion-content>
+  <div id="container">
+    <form [formGroup]="loginForm" (ngSubmit)="emailLogin($event)">
+      <ion-row>
+
+        <ion-col size="15">
+          <ion-item>
+            <ion-input class="input" formControlName="email" label="Email" labelPlacement="stacked" type="email"
+              placeholder="email@dominio.com" required></ion-input>
+            <ion-icon name="person"></ion-icon>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="15">
+          <ion-item>
+            <ion-input class="input" formControlName="password" label="Contraseña" labelPlacement="stacked"
+              type="password" placeholder="Al menos 8 carácteres" required></ion-input>
+            <ion-icon name="lock-closed"></ion-icon>
+          </ion-item>
+        </ion-col>
+
+        <ion-col size="10">
+          <div class="passwordResetLink">
+            <a [routerLink]="['/password-reset']">¿Olvidaste tu contraseña?</a>
+          </div>
+        </ion-col>
+
+        <ion-col size="10">
+          <ion-button 
+          class="button" 
+          expand="block" 
+          type="submit" 
+          title="botondeingreso">Ingresar</ion-button>
+        </ion-col>
+      </ion-row>
+    </form>
+
+    <ion-row>
+      <ion-col size="10">
+        <ion-button 
+        title="botón de inicio de sesión" 
+        class="button" 
+        expand="block" 
+        (click)="googleLogin()">Iniciar Sesión con Google</ion-button>
+      </ion-col>
+      <ion-col size="11">
+        <div class="signupLink">
+          <p>¿No tenes una cuenta? <a [routerLink]="['/sign-up']">Crear cuenta</a></p>
+        </div>
+      </ion-col>
+    </ion-row>
+  </div>
+</ion-content>

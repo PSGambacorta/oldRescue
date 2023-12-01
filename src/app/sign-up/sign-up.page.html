@@ -1,0 +1,53 @@
+
+
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-title style="text-align: center;" id="toolbarTitle">¡Bienvenido!</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div id="container">
+    <form [formGroup]="signUpForm" (ngSubmit)="signUp($event)">
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col size="14">
+            <ion-item>
+              <ion-input formControlName="email" label="Ingrese un email" labelPlacement="stacked" type="email"
+                placeholder="email@ejemplo.com" required class="input"></ion-input>
+              <ion-icon name="person"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid [fixed]="true">
+        <ion-row>
+          <ion-col size="14">
+            <ion-item>
+              <ion-input formControlName="password" label="Ingrese una contraseña" labelPlacement="stacked"
+                type="password" placeholder="Al menos 8 carácteres" required class="input"></ion-input>
+              <ion-icon name="lock-closed"></ion-icon>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid>
+        <ion-row>
+          <ion-col size="10">
+            <ion-button title="registrarse" class="button" expand="block" type="submit">Registrarse</ion-button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </form>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div class="login-link">
+            <p class="login">¿Ya tenes una cuenta? <a [routerLink]="['/login']">Inicia sesión</a></p>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+</ion-content>

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "auth-test-d6d12": {
+      "hosting": {
+        "app": [
+          "auth-test-d6d12"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "auth-test-d6d12"
+  }
+}

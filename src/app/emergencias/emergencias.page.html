@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar class="toolbar">
+    <ion-buttons slot="start">
+      <ion-back-button class="back-button" title="volver" defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title id="toolbarTitle">
+      EMERGENCIA MEDICA
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  
+  <!-- Listas Desplegables-->
+  <ion-item>
+    <ion-select [(ngModel)]="opcionSeleccionada1" (ionChange)="onChangeSelect()" label="¿Dolor en el Pecho?">
+      <ion-select-option value="opcion1-1">SI, MUCHO</ion-select-option>
+      <ion-select-option value="opcion1-2">Si, Leve</ion-select-option>
+      <ion-select-option value="opcion1-3">No.</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-select [(ngModel)]="opcionSeleccionada2"  (ionChange)="onChangeSelect()" label="¿Dificultad al respirar?">
+      <ion-select-option value="opcion2-1">SI, MUCHA</ion-select-option>
+      <ion-select-option value="opcion2-2">Si, Leve</ion-select-option>
+      <ion-select-option value="opcion2-3">No.</ion-select-option>
+    </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-select [(ngModel)]="opcionSeleccionada3"  (ionChange)="onChangeSelect()" label="¿Problemas al hablar?">
+      <ion-select-option value="opcion3-1">SI, MUY INTENSOS</ion-select-option>
+      <ion-select-option value="opcion3-2">Si, Leves</ion-select-option>
+      <ion-select-option value="opcion3-3">No.</ion-select-option>
+    </ion-select>
+  </ion-item>
+  
+  <!-- Boton "Llamar Emergencia" Ubicacion: Abajo a la derecha-->
+ 
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button [disabled]="!resultadoSeleccion" (click)="evaluarResultado()">
+      <ion-icon name="add-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
